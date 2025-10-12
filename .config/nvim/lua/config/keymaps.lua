@@ -5,7 +5,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
--- local unmap = vim.keymap.del
+local unmap = vim.keymap.del
 
 -- Remove LazyVim's Better Up/Down keymaps
 -- unmap({ "n", "x" }, "j")
@@ -154,8 +154,8 @@
 -- unmap("t", "<c-_>")
 
 -- Remove LazyVim's Window keymaps
--- unmap("n", "<leader>-")
--- unmap("n", "<leader>|")
+unmap("n", "<leader>-")
+unmap("n", "<leader>|")
 -- unmap("n", "<leader>wd")
 -- unmap("n", "<leader>wm")
 -- unmap("n", "<leader>uZ")
@@ -206,8 +206,8 @@ map("n", "x", '"_x', { desc = "Delete single character without yanking" })
 map("x", "p", [["_dP]], { desc = "Paste without yanking" })
 
 -- window management
--- map("n", "<leader>w|", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
--- map("n", "<leader>w-", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+map("n", "<leader>w|", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+map("n", "<leader>w-", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
 -- map("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 -- map("n", "<leader>wd", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 -- map("n", "<leader>wx", "<cmd>bwipeout<CR>", { desc = "Close current buffer" }) -- close current split window
