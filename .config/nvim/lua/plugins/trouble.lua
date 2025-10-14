@@ -2,7 +2,6 @@ local window_opts = "focus=true win.relative=win win.position=right win.size=70"
 
 return {
   "folke/trouble.nvim",
-  -- stylua: ignore start
   opts = {
     focus = true,
 
@@ -12,6 +11,7 @@ return {
       ["<CR>"] = "jump_close",
     },
   },
+  -- stylua: ignore start
   keys = {
     { "<leader>xx", false },
     { "<leader>xX", false },

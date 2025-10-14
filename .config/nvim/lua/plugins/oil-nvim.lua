@@ -8,7 +8,7 @@ return {
       oil.setup({
         columns = { "icon" },
         delete_to_trash = true,
-        skip_confirm_for_simple_edits = true,
+        skip_confirm_for_simple_edits = false,
         view_options = {
           show_hidden = true,
         },
