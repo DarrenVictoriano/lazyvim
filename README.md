@@ -2,10 +2,9 @@
 
 My personal LazyVim config.
 
-## Installation
+## > [!WARNING]
 
-Setup:
-backup your exsiting Neovim config:
+Backup your existing Neovim config first if your have one already.
 
 ```bash
 # required
@@ -17,13 +16,31 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
-1. clone this repo
+## Installation
+
+1. Install Neovim and GNU Stow
+
+On MacOS:
+
+```bash
+brew install neovim
+brew install stow
+```
+
+On Linux:
+
+```bash
+sudo pacman -S neovim
+sudo pacman -S stow
+```
+
+2. clone this repo
 
 ```bash
 git clone git@github.com:DarrenVictoriano/lazyvim.git lazyvim
 ```
 
-2. symlink it using GNU Stow
+3. symlink it using GNU Stow
 
 ```bash
 stow -t ~ lazyvim
