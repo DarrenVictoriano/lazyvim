@@ -16,6 +16,7 @@ return {
           padding = 2,
           max_width = 100,
           max_height = 30,
+          border = "rounded",
         },
         keymaps = {},
       })
