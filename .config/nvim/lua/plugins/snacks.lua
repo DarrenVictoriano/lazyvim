@@ -23,7 +23,7 @@ return {
       },
       picker = {
         layout = {
-          reverse = true,
+          reverse = false,
           layout = {
             box = "vertical",
             backdrop = false,
@@ -31,16 +31,16 @@ return {
             height = 0.90,
             border = "none",
             {
+              box = "vertical",
+              { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+              { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
+            },
+            {
               win = "preview",
               title = "{preview:Preview}",
               border = "rounded",
               title_pos = "center",
-              height = 0.6,
-            },
-            {
-              box = "vertical",
-              { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
-              { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+              height = 0.7,
             },
           },
         },
