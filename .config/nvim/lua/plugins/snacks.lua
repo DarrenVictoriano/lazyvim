@@ -54,6 +54,12 @@ return {
     { "<leader>ff", function() Snacks.picker.files({hidden = true, ignored= false}) end, desc = "Find Files (Root Dir)" },
     { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Find Help Files" },
+
+    -- git
+    { "<leader>gd", false },
+    { "<leader>gD", false },
+    { "<leader>gs", false },
+    { "<leader>gS", false },
     },
   },
 }

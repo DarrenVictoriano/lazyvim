@@ -39,3 +39,5 @@ luac.out
 *.x86_64
 *.hex
 
+# omarchy theme
+.config/nvim/lua/plugins/theme.lua
