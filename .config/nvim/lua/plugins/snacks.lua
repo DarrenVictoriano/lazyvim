@@ -54,6 +54,7 @@ return {
     { "<leader>ff", function() Snacks.picker.files({hidden = true, ignored= false}) end, desc = "Find Files (Root Dir)" },
     { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Find Help Files" },
+    { "<leader>/", LazyVim.pick("grep", {hidden  = true}), desc = "Grep (Root Dir)" },
 
     -- git
     { "<leader>gd", false },
