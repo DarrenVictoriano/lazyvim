@@ -25,7 +25,7 @@ return {
         },
         clang_format = {
           prepend_args = {
-            "--style=Google",
+            "--style=file",
           },
         },
       },
