@@ -2,7 +2,7 @@
 
 My personal LazyVim config.
 
-## > [!WARNING]
+## WARNING
 
 Backup your existing Neovim config first if your have one already.
 
