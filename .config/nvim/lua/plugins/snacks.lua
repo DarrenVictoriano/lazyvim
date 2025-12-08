@@ -21,30 +21,30 @@ return {
           header = dos_rebel_classic,
         },
       },
-      picker = {
-        layout = {
-          reverse = false,
-          layout = {
-            box = "vertical",
-            backdrop = false,
-            width = 0.9,
-            height = 0.90,
-            border = "none",
-            {
-              box = "vertical",
-              { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
-              { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
-            },
-            {
-              win = "preview",
-              title = "{preview:Preview}",
-              border = "rounded",
-              title_pos = "center",
-              height = 0.7,
-            },
-          },
-        },
-      },
+      -- picker = {
+      --   layout = {
+      --     reverse = false,
+      --     layout = {
+      --       box = "vertical",
+      --       backdrop = false,
+      --       width = 0.9,
+      --       height = 0.90,
+      --       border = "none",
+      --       {
+      --         box = "vertical",
+      --         { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+      --         { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
+      --       },
+      --       {
+      --         win = "preview",
+      --         title = "{preview:Preview}",
+      --         border = "rounded",
+      --         title_pos = "center",
+      --         height = 0.7,
+      --       },
+      --     },
+      --   },
+      -- },
     },
     -- stylua: ignore
     keys = {
