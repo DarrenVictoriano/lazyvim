@@ -1,6 +1,37 @@
 return {
-  "hrsh7th/nvim-cmp",
-  opts = {
-    auto_brackets = { python = false } -- disables double brackets in python
-  }
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+
+      -- Fix double brackets bug in python
+      opts.auto_brackets = opts.auto_brackets or {}
+      opts.auto_brackets.python = false
+
+      -- Disable "auto select" cmp behavior
+      -- Remove line if you want it back
+      opts.preselect = cmp.PreselectMode.None
+
+      -- Ensure comleteopts does't auto-insert / auto-select items
+      opts.completion = opts.completion or {}
+      opts.completion.completeopt = "menu,menuone,noinsert,noselect"
+
+      -- Remap: <CR>
+      -- Confirm ONLY If you explicitly selected an entry;
+      -- otherwise do normal Enter (newline + regular indent).
+      opts.mapping = opts.mapping or {}
+      opts.mapping["<CR>"] = cmp.mapping(function(fallback)
+        if cmp.visible() and cmp.get_active_entry() then
+          cmp.confirm({ select = false })
+        else
+          fallback()
+        end
+      end, { "i", "s" })
+
+      -- Keep Ctrl-Y as "always confirm"
+      -- opts.mapping["<C-y>"] = cmp.mapping.confirm({ select = true })
+
+      return opts
+    end,
+  },
 }
