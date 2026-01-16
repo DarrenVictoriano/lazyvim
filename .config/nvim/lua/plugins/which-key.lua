@@ -3,6 +3,7 @@ return {
   opts = {
     spec = {
       { "<leader>h", group = "harpoon" },
+      { "<leader>m", group = "metals" },
       { "<leader>K", group = "Keyword help" },
       { "<leader><space>", group = "Opened Buffers" },
       { "<leader>e", hidden = true },
