@@ -5,8 +5,10 @@ return {
       local cmp = require("cmp")
 
       -- Fix double brackets bug in python
-      opts.auto_brackets = opts.auto_brackets or {}
-      opts.auto_brackets.python = false
+      -- Remove python from LazyVim's auto_brackets list (array)
+      opts.auto_brackets = vim.tbl_filter(function(ft)
+        return ft ~= "python"
+      end, opts.auto_brackets or {})
 
       -- Disable "auto select" cmp behavior
       -- Remove line if you want it back
