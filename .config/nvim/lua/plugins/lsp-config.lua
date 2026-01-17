@@ -1,6 +1,16 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
+    servers = {
+      jsonls = {
+        settings = {
+          json = {
+            format = { enable = false },   -- Let Prettier handle formatting
+            validate = { enable = false }, -- Disables strict JSON validation (trailing commas)
+          },
+        },
+      },
+    },
     setup = {
       pyright = function(_, opts)
         opts.capabilities = opts.capabilities or vim.lsp.protocol.make_client_capabilities()
