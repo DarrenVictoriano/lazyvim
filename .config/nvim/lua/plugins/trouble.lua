@@ -21,6 +21,5 @@ return {
     { "<leader>cS", "<cmd>Trouble lsp toggle " .. window_opts .. "<CR>", desc = "LSP references/definitions/... (Trouble)" },
     { "<leader>cs", "<cmd>Trouble symbols toggle " .. window_opts .. "<CR>", desc = "Symbols (Trouble)" },
     { "<leader>fo", "<cmd>Trouble symbols toggle " .. window_opts .. "<CR>", desc = "Find Symbols" },
-
   },
 }
