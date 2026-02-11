@@ -1,5 +1,6 @@
 return {
   "ThePrimeagen/harpoon",
+  branch = "harpoon2",
   keys = function()
     local keys = {
       {
@@ -19,28 +20,28 @@ return {
       },
       -- custom keys
       {
-        "6",
+        "<F6>",
         function()
           require("harpoon"):list():select(1)
         end,
         desc = "Harpoon to File 6",
       },
       {
-        "5",
+        "<F5>",
         function()
           require("harpoon"):list():select(2)
         end,
         desc = "Harpoon to File 5",
       },
       {
-        "4",
+        "<F4>",
         function()
           require("harpoon"):list():select(3)
         end,
         desc = "Harpoon to File 4",
       },
       {
-        "8",
+        "<F8>",
         function()
           require("harpoon"):list():select(4)
         end,
