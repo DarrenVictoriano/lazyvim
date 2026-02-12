@@ -5,8 +5,15 @@ return {
       jsonls = {
         settings = {
           json = {
-            format = { enable = false },   -- Let Prettier handle formatting
+            format = { enable = false }, -- Let Prettier handle formatting
             validate = { enable = false }, -- Disables strict JSON validation (trailing commas)
+          },
+        },
+        pyright = {
+          settings = {
+            pyright = {
+              disableTaggedHints = true,
+            },
           },
         },
       },
