@@ -4,7 +4,7 @@ return {
     opts = function(_, opts)
       local hipatterns = require("mini.hipatterns")
 
-      -- Simple HSL → HEX converter courtesy of AI
+      -- A simple HSL → HEX converter courtesy of AI
       local function hsl_to_hex(h, s, l)
         s = s / 100
         l = l / 100
@@ -36,7 +36,7 @@ return {
         return "#" .. to_hex(r) .. to_hex(g) .. to_hex(b)
       end
 
-      -- Extend existing highlighters (do NOT overwrite)
+      -- Extend lazyvim's highlighters (do NOT overwrite)
       opts.highlighters = opts.highlighters or {}
 
       opts.highlighters.hsl_function = {
