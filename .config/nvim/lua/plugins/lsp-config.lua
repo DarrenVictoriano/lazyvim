@@ -9,11 +9,11 @@ return {
             validate = { enable = false }, -- Disables strict JSON validation (trailing commas)
           },
         },
-        pyright = {
-          settings = {
-            pyright = {
-              disableTaggedHints = true,
-            },
+      },
+      pyright = {
+        settings = {
+          pyright = {
+            disableTaggedHints = true,
           },
         },
       },
