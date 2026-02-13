@@ -34,7 +34,6 @@ return {
       -- extends Lazyvim's default opts
       opts.highlighters = opts.highlighters or {}
       opts.highlighters.hsl_function = {
-        -- Safe pattern, no leading ()
         -- only matches literal int like: hslToHex(10, 20, 80)
         pattern = "hslToHex%(%d+%s*,%s*%d+%s*,%s*%d+%s*%)",
         group = function(_, match)
