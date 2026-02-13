@@ -4,6 +4,7 @@ return {
     opts = function(_, opts)
       local hipatterns = require("mini.hipatterns")
 
+      -- Simple HSL to HEX converter
       local function hsl_to_hex(h, s, l)
         s = s / 100
         l = l / 100
@@ -30,10 +31,11 @@ return {
         return "#" .. to_hex(r) .. to_hex(g) .. to_hex(b)
       end
 
+      -- extends Lazyvim's default opts
       opts.highlighters = opts.highlighters or {}
-
       opts.highlighters.hsl_function = {
         -- Safe pattern, no leading ()
+        -- only matches literal int like: hslToHex(10, 20, 80)
         pattern = "hslToHex%(%d+%s*,%s*%d+%s*,%s*%d+%s*%)",
         group = function(_, match)
           local h, s, l = match:match("(%d+)%s*,%s*(%d+)%s*,%s*(%d+)")
@@ -45,7 +47,6 @@ return {
         end,
         extmark_opts = { priority = 5000 },
       }
-
       return opts
     end,
   },
