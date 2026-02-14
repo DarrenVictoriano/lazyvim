@@ -32,7 +32,6 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 map("n", "<CR>", "za", { noremap = true, silent = true })
 
 map("n", "x", '"_x', { desc = "Delete single character without yanking" })
-map("x", "p", [["_dP]], { desc = "Paste without yanking" })
 
 -- window management
 map("n", "<leader>w|", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
