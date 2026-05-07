@@ -53,7 +53,8 @@ return {
     { "<leader>n", function() require("noice").cmd("history") end, desc = "Notification History" },
     { "<leader><space>", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>ff", function() Snacks.picker.files({hidden = true, ignored= false}) end, desc = "Find Files (Root Dir)" },
-    { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
+    { "<leader>fF", function() Snacks.picker.files({hidden = true, ignored= true}) end, desc = "Find Files (Root Dir + gitignore)" },
+    -- { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Find Help Files" },
     { "<leader>/", function () Snacks.picker.grep({args = { "--hidden", "--glob", "!.git/*" }}) end, desc = "Grep (Root Dir) rg" },
 
