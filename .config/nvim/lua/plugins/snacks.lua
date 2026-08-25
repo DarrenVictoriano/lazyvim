@@ -1,13 +1,13 @@
 local dos_rebel_classic = [[
-                                           ███                 
-                                          ░░░                  
- ████████    ██████   ██████  █████ █████ ████  █████████████  
-░░███░░███  ███░░███ ███░░███░░███ ░░███ ░░███ ░░███░░███░░███ 
- ░███ ░███ ░███████ ░███ ░███ ░███  ░███  ░███  ░███ ░███ ░███ 
- ░███ ░███ ░███░░░  ░███ ░███ ░░███ ███   ░███  ░███ ░███ ░███ 
+                                           ███
+                                          ░░░
+ ████████    ██████   ██████  █████ █████ ████  █████████████
+░░███░░███  ███░░███ ███░░███░░███ ░░███ ░░███ ░░███░░███░░███
+ ░███ ░███ ░███████ ░███ ░███ ░███  ░███  ░███  ░███ ░███ ░███
+ ░███ ░███ ░███░░░  ░███ ░███ ░░███ ███   ░███  ░███ ░███ ░███
  ████ █████░░██████ ░░██████   ░░█████    █████ █████░███ █████
-░░░░ ░░░░░  ░░░░░░   ░░░░░░     ░░░░░    ░░░░░ ░░░░░ ░░░ ░░░░░ 
-                                                               
+░░░░ ░░░░░  ░░░░░░   ░░░░░░     ░░░░░    ░░░░░ ░░░░░ ░░░ ░░░░░
+
 ]]
 
 return {
@@ -48,21 +48,21 @@ return {
     },
     -- stylua: ignore
     keys = {
-    { "<leader>,", false },
-    -- { "<leader>e", false },
-    { "<leader>n", function() require("noice").cmd("history") end, desc = "Notification History" },
-    { "<leader><space>", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>ff", function() Snacks.picker.files({hidden = true, ignored= false}) end, desc = "Find Files (Root Dir)" },
-    { "<leader>fF", function() Snacks.picker.files({hidden = true, ignored= true}) end, desc = "Find Files (Root Dir + gitignore)" },
-    -- { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
-    { "<leader>fh", function() Snacks.picker.help() end, desc = "Find Help Files" },
-    { "<leader>/", function () Snacks.picker.grep({args = { "--hidden", "--glob", "!.git/*" }}) end, desc = "Grep (Root Dir) rg" },
+      { "<leader>,",       false },
+      -- { "<leader>e", false },
+      { "<leader>n",       function() require("noice").cmd("history") end,                                   desc = "Notification History" },
+      { "<leader><space>", function() Snacks.picker.buffers() end,                                           desc = "Buffers" },
+      { "<leader>ff",      function() Snacks.picker.files({ hidden = true, ignored = false }) end,           desc = "Find Files (Root Dir)" },
+      { "<leader>fF",      function() Snacks.picker.files({ hidden = true, ignored = true }) end,            desc = "Find Files (Root Dir + gitignore)" },
+      -- { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
+      { "<leader>fh",      function() Snacks.picker.help() end,                                              desc = "Find Help Files" },
+      { "<leader>/",       function() Snacks.picker.grep({ args = { "--hidden", "--glob", "!.git/*" } }) end, desc = "Grep (Root Dir) rg" },
 
-    -- git
-    { "<leader>gd", false },
-    { "<leader>gD", false },
-    { "<leader>gs", false },
-    { "<leader>gS", false },
+      -- git
+      { "<leader>gd",      false },
+      { "<leader>gD",      false },
+      { "<leader>gs",      false },
+      { "<leader>gS",      false },
     },
   },
 }
