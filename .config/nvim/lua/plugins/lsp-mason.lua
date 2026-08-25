@@ -15,6 +15,7 @@ return {
       "cmakelint", -- cmake lint
       "rust-analyzer",
       "yamlfmt",
+      "robotframework-lsp",
     },
   },
 }
