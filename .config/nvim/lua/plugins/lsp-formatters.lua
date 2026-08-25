@@ -13,8 +13,14 @@ return {
         bash = { "shfmt" },
         yaml = { "yamlfmt" },
         yml = { "yamlfmt" },
+        robot = { "robotidy" },
       },
       formatters = {
+        robotidy = {
+          command = "robotidy",
+          args = { "--overwrite", "$FILENAME" },
+          stdin = false,
+        },
         prettier = {
           prepend_args = {
             "--prose-wrap",
