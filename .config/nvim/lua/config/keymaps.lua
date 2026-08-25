@@ -32,6 +32,7 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 map("n", "<CR>", "za", { noremap = true, silent = true })
 
 map("n", "x", '"_x', { noremap = true, silent = true, desc = "Delete single character without yanking" })
+map("x", "p", [["_dP]], { desc = "Paste without yanking" })
 
 -- window management
 map("n", "<leader>w|", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
@@ -56,6 +57,19 @@ map("n", "<C-b>", "<C-b>zz", { desc = "Move down one full screen" })
 -- Search next/prev and center + open folds
 map("n", "n", "nzzzv", { desc = "Search next and center" })
 map("n", "N", "Nzzzv", { desc = "Search previous and center" })
+
+-- Copy buffer path to clipboard
+map("n", "<leader>cp", function()
+  local path = vim.fn.fnamemodify(vim.fn.expand("%"), ":.")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Copy relative path" })
+
+map("n", "<leader>cP", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Copy absolute path" })
 
 -- Git
 map("n", "<leader>gl", function() Snacks.picker.git_log_line() end, { desc = "Git Log Line" })

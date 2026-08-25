@@ -55,6 +55,7 @@ return {
     { "<leader>ff", function() Snacks.picker.files({hidden = true, ignored= false}) end, desc = "Find Files (Root Dir)" },
     { "<leader>fF", function() Snacks.picker.files({hidden = true, ignored= true}) end, desc = "Find Files (+ gitignore)" },
     { "<leader>fw", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
+    -- { "<leader>fF", function() Snacks.picker.files({hidden = true, root = false}) end, desc = "Find Files (cwd)" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Find Help Files" },
     { "<leader>/", function () Snacks.picker.grep({args = { "--hidden", "--glob", "!.git/*" }}) end, desc = "Grep (Root Dir) rg" },
 
