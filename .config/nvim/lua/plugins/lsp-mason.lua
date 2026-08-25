@@ -14,6 +14,7 @@ return {
       "clang-format", -- c++ formatter
       "cmakelint", -- cmake lint
       "rust-analyzer",
+      "yamlfmt",
     },
   },
 }

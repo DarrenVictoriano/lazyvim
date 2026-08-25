@@ -11,6 +11,8 @@ return {
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
         sh = { "shfmt" },
         bash = { "shfmt" },
+        yaml = { "yamlfmt" },
+        yml = { "yamlfmt" },
       },
       formatters = {
         prettier = {
