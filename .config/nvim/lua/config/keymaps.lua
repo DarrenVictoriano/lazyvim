@@ -34,7 +34,7 @@ map("n", "<CR>", "za", { noremap = true, silent = true })
 map("n", "x", '"_x', { desc = "Delete single character without yanking" })
 
 -- window management
-map("n", "<leader>w|", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+map("n", "<leader>w|", "<C-w>v", { desc = "Split window vertically" })   -- split window vertically
 map("n", "<leader>w-", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
 -- map("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 -- map("n", "<leader>wd", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
@@ -61,3 +61,16 @@ map("n", "N", "Nzzzv", { desc = "Search previous and center" })
 map("n", "<leader>gl", function() Snacks.picker.git_log_line() end, { desc = "Git Log Line" })
 map("n", "<leader>gL", function() Snacks.picker.git_log({ cwd = LazyVim.root.git() }) end, { desc = "Git Log" })
 map({ "n", "x" }, "<leader>go", function() Snacks.gitbrowse() end, { desc = "Git Browse (open)" })
+
+-- Copy buffer path to clipboard
+map("n", "<leader>cp", function()
+  local path = vim.fn.fnamemodify(vim.fn.expand("%"), ":.")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Copy relative path" })
+
+map("n", "<leader>cP", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Copy absolute path" })
