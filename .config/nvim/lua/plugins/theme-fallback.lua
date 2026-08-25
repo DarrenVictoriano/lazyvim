@@ -1,4 +1,4 @@
-local linux_theme = vim.fn.expand("~/.config/omarchy/current/theme/neovim.lua")
+local linux_theme = vim.fn.expand("~/.local/state/omarchy/current/theme/neovim.lua")
 
 if vim.fn.filereadable(linux_theme) == 1 then
   -- Linux: the symlink target exists, just do nothing
