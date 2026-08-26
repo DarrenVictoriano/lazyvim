@@ -13,12 +13,12 @@ return {
         bash = { "shfmt" },
         yaml = { "yamlfmt" },
         yml = { "yamlfmt" },
-        robot = { "robotidy" },
+        robot = { "robocop_format" },
       },
       formatters = {
-        robotidy = {
-          command = "robotidy",
-          args = { "--overwrite", "$FILENAME" },
+        robocop_format = {
+          command = "robocop",
+          args = { "format", "--overwrite", "$FILENAME" },
           stdin = false,
         },
         prettier = {
