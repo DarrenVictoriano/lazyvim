@@ -35,7 +35,13 @@ api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- Automatically save the buffer when:
+-- Set commentstring for Robot Framework (gcc support)
+api.nvim_create_autocmd("FileType", {
+  pattern = "robot",
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end,
+})
 -- TextChages in Normal mode
 -- Leave out of the Insert Mode
 vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {

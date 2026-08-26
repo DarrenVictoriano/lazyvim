@@ -55,6 +55,12 @@ return {
         opts.capabilities = opts.capabilities or vim.lsp.protocol.make_client_capabilities()
         opts.capabilities.general = opts.capabilities.general or {}
         opts.capabilities.general.positionEncodings = { "utf-16" }
+        -- Disable ruff LSP formatting so conform owns it exclusively.
+        -- ruff_fix/ruff_format/ruff_organize_imports in conform handle all formatting.
+        opts.on_attach = function(client, _)
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+        end
       end,
       clangd = function(_, opts)
         opts.capabilities.offsetEncoding = { "utf-16" }
