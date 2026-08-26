@@ -13,7 +13,7 @@ return {
         bash = { "shfmt" },
         yaml = { "yamlfmt" },
         yml = { "yamlfmt" },
-        robot = { "robocop_format" },
+        robot = { "robocop_format" }, -- install: pipx install robotframework-robocop
       },
       formatters = {
         robocop_format = {
