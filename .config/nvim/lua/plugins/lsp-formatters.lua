@@ -11,8 +11,16 @@ return {
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
         sh = { "shfmt" },
         bash = { "shfmt" },
+        yaml = { "yamlfmt" },
+        yml = { "yamlfmt" },
+        robot = { "robocop_format" }, -- install: pipx install robotframework-robocop
       },
       formatters = {
+        robocop_format = {
+          command = "robocop",
+          args = { "format", "--overwrite", "$FILENAME" },
+          stdin = false,
+        },
         prettier = {
           prepend_args = {
             "--prose-wrap",
