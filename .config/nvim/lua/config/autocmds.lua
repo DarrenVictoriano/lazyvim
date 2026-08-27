@@ -42,6 +42,8 @@ api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "# %s"
   end,
 })
+
+-- Automatically save the buffer when:
 -- TextChages in Normal mode
 -- Leave out of the Insert Mode
 vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {

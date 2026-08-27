@@ -23,7 +23,9 @@ return {
           if handle then
             while true do
               local name, type = vim.uv.fs_scandir_next(handle)
-              if not name then break end
+              if not name then
+                break
+              end
               if type == "directory" then
                 table.insert(pythonpath, tests_dir .. "/" .. name)
               end
