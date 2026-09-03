@@ -4,7 +4,7 @@ return {
   opts = {
     linters_by_ft = {
       c = { "clangtidy" },
-      cpp = { "cpplint" },
+      cpp = { "clangtidy" }, -- cpplint is google focused
       robot = { "robocop" },
     },
     linters = {
