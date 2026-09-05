@@ -35,7 +35,7 @@ return {
             "--print-width",
             "80",
             "--tab-width",
-            "4",
+            "2",
             "--end-of-line",
             "lf",
           },
